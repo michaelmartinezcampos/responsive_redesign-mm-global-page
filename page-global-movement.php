@@ -52,25 +52,39 @@ get_header(); ?>
 				    </div>
 				    <?php  endwhile; endif;?>
 			</div>
-<!-End of World News->
+<!--End of World News-->
 <!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup"><form id="mc-embedded-subscribe-form" class="validate" action="//meatlessmonday.us1.list-manage.com/subscribe/post?u=8f9935158441b7563030ecd70&amp;id=28d068a3e2" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
-<div id="mc_embed_signup_scroll">
-<div class="mc-field-group">
-<div id="form-container">
-<div id="mailchimp-input"><h3>Sign Up for the Meatless Monday Global Newsletter</h3><div id="inputs"><input id="mce-EMAIL" class="required email" name="EMAIL" type="email" value="Email Address" /><input id="mc-embedded-subscribe" class="button" name="subscribe" type="submit" value="Sign Up!" /></div></div>
-</div>
-</div>
-<div id="mce-responses" class="clear"></div>
+<div id="mc_embed_signup row"><form id="mc-embedded-subscribe-form" class="validate" action="//meatlessmonday.us1.list-manage.com/subscribe/post?u=8f9935158441b7563030ecd70&amp;id=28d068a3e2" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+  <div id="mc_embed_signup_scroll">
+    <div class="mc-field-group">
+      <div id="form-container">
+        <div id="global-form-title" class="col-xs-12 col-sm-7">
+          <h3>Sign Up for the Meatless Monday Global Newsletter</h3>
+        </div>
+        <div id="global-form-input" class="col-xs-12 col-sm-3"> 
+          <input id="mce-EMAIL" class="required email" name="EMAIL" type="email" value="Email Address" />
+        </div>
+        <div id="global-form-submit" class="col-xs-12 col-sm-2">
+          <input id="mc-embedded-subscribe" class="button" name="subscribe" type="submit" value="Sign Up!" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="mce-responses" class="clear">
+  </div>
 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-<div style="position: absolute; left: -5000px;"><input tabindex="-1" name="b_8f9935158441b7563030ecd70_28d068a3e2" type="text" value="" /></div>
-<div class="clear">
-<div class="response" id="mce-error-response" style="display:none"></div>
-                                
-<div class="response" id="mce-success-response" style="display:none"></div>
+  <div style="position: absolute; left: -5000px;">
+    <input tabindex="-1" name="b_8f9935158441b7563030ecd70_28d068a3e2" type="text" value="" />
+  </div>
+  <div class="clear">
+    <div class="response" id="mce-error-response" style="display:none">
+    </div>
+    <div class="response" id="mce-success-response" style="display:none">
+    </div>
+  </div>
 </div>
+  </form>
 </div>
-</form></div>
 <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" type="text/javascript"></script><script type="text/javascript">// <![CDATA[
 (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
 // ]]></script>
