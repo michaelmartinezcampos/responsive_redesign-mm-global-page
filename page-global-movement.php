@@ -4,7 +4,7 @@ Template Name: Global Movement
  */
 get_header(); ?>
 
-  <div id="content" class="narrowcolumn" role="main">
+  <div id="" class="" role="main">
     <div id="global_page_content">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="entry">
