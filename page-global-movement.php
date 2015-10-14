@@ -31,13 +31,13 @@ get_header(); ?>
 				    <?php $first = false; 
 				    endif;
 				    ?>
-				    <div class="world_news_article">
-					<div class="world_news_article_img"> 
+				    <div class="world_news_article row">
+					      <div class="world_news_article_img col-xs-12 col-sm-2"> 
 							<a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'recipe-feature-home' ); } ?></a>
                                     </div>
 
-                                    <div class="world_news_article_content">
-                                    <div class="world_news_article_content_inner"><p class="world_news_article_title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></p>
+                                    <div class="world_news_article_content col-xs-10 col-sm-10">
+                                    <p class="world_news_article_title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></p>
 				   
 				    <p class="world_news_article_excerpt">
 					    <?php if(get_post_meta($post->ID, 'mm_article_excerpt', true)) {
@@ -47,7 +47,7 @@ get_header(); ?>
 						}?>
 					<a href="<?php the_permalink(); ?>" class="world-news-read-more">Read More</a>
 					</p>
-                                         </div>
+                                         
                                       </div>
 				    </div>
 				    <?php  endwhile; endif;?>
