@@ -89,7 +89,7 @@ get_header(); ?>
 // ]]></script>
 <!--End mc_embed_signup-->
 
-  <div id="globalLogos">
+  
     <div id="global-posts">
     <h3 class="header">Meatless Monday Global Connect</h3>
     <?php $args = array(
