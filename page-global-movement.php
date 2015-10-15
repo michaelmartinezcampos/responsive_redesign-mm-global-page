@@ -4,8 +4,7 @@ Template Name: Global Movement
  */
 get_header(); ?>
 
-  <div id="" class="" role="main">
-    <div id="global_page_content">
+    <div id="global_page_content" role="main">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="entry">
         <?php the_content(); ?>
@@ -18,43 +17,43 @@ get_header(); ?>
 
 <!--World News-->
 <div id="world_news">
-				<h1 style="color: #f96e08">World News</h1>
-				<?php $args = array(
-				      'post_type'=> 'articles',
-				      'article_categories' => 'world-news',
-				      'posts_per_page' => 3,
-				    );              
-				    $the_query = new WP_Query( $args );
-				    $first = true;
-				    if($the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
-				    if ( $first ): ?>
-				    <?php $first = false; 
-				    endif;
-				    ?>
-				    <div class="world_news_article row">
-					      <div class="world_news_article_img col-xs-12 col-sm-2"> 
-							<a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'recipe-feature-home' ); } ?></a>
+        <h1 style="color: #f96e08">World News</h1>
+        <?php $args = array(
+              'post_type'=> 'articles',
+              'article_categories' => 'world-news',
+              'posts_per_page' => 3,
+            );              
+            $the_query = new WP_Query( $args );
+            $first = true;
+            if($the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
+            if ( $first ): ?>
+            <?php $first = false; 
+            endif;
+            ?>
+            <div class="world_news_article row">
+                <div class="world_news_article_img col-xs-12 col-sm-2"> 
+              <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'recipe-feature-home' ); } ?></a>
                                     </div>
 
                                     <div class="world_news_article_content col-xs-10 col-sm-10">
                                     <p class="world_news_article_title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></p>
-				   
-				    <p class="world_news_article_excerpt">
-					    <?php if(get_post_meta($post->ID, 'mm_article_excerpt', true)) {
-							echo get_post_meta($post->ID, 'mm_article_excerpt', true);
-						} else { 
-							the_excerpt(); 
-						}?>
-					<a href="<?php the_permalink(); ?>" class="world-news-read-more">Read More</a>
-					</p>
+           
+            <p class="world_news_article_excerpt">
+              <?php if(get_post_meta($post->ID, 'mm_article_excerpt', true)) {
+              echo get_post_meta($post->ID, 'mm_article_excerpt', true);
+            } else { 
+              the_excerpt(); 
+            }?>
+          <a href="<?php the_permalink(); ?>" class="world-news-read-more">Read More</a>
+          </p>
                                          
                                       </div>
-				    </div>
-				    <?php  endwhile; endif;?>
-			</div>
+            </div>
+            <?php  endwhile; endif;?>
+      </div>
 <!--End of World News-->
 <!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup row"><form id="mc-embedded-subscribe-form" class="validate" action="//meatlessmonday.us1.list-manage.com/subscribe/post?u=8f9935158441b7563030ecd70&amp;id=28d068a3e2" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+<div id="mc_embed_signup" class="row"><form id="mc-embedded-subscribe-form" class="validate" action="//meatlessmonday.us1.list-manage.com/subscribe/post?u=8f9935158441b7563030ecd70&amp;id=28d068a3e2" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
   <div id="mc_embed_signup_scroll">
     <div class="mc-field-group">
       <div id="form-container">
@@ -127,9 +126,7 @@ get_header(); ?>
             <?php  endwhile; endif; wp_reset_query();?>
 
     </div>
-    
-    
-  </div>  
+     
   <script type="text/javascript">
   $('.additional-content').hide();
   $('.expand-link').click(function(){
@@ -144,7 +141,3 @@ get_header(); ?>
   </script>
 
   <?php get_footer();?>
-
-  
-
-
