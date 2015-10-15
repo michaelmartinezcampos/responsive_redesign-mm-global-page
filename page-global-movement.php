@@ -101,13 +101,13 @@ get_header(); ?>
             $the_query = new WP_Query( $args );
             if($the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
             
-            <div class="single-global-content">
-              <div class="mm-gobal-partners-logo">
+            <div class="single-global-content row">
+              <div class="mm-global-partners-logo col-xs-12 col-sm-4">
                 <a href="<?php if(get_post_meta($post->ID, 'mm_global_link', true)) {
                 echo get_post_meta($post->ID, 'mm_global_link', true); } ?>" alt="<?php the_title();?>" title="<?php the_title();?>"><?php the_post_thumbnail();?></a>
               </div>
 
-              <div class="mm-gobal-partners-logo-content">  
+              <div class="mm-global-partners-logo-content col-xs-12 col-sm-8">  
                   <h3><a href="<?php if(get_post_meta($post->ID, 'mm_global_link', true)) {
                   echo get_post_meta($post->ID, 'mm_global_link', true); } ?>">
                   <?php the_title();?> <?php if ( get_post_meta($post->ID, 'mm_global_flag', true) ) : ?>
