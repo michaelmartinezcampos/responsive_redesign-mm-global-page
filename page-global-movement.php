@@ -113,14 +113,15 @@ get_header(); ?>
                   <?php the_title();?> <?php if ( get_post_meta($post->ID, 'mm_global_flag', true) ) : ?>
                 <img src="<?php bloginfo('wpurl'); ?><?php echo get_post_meta($post->ID, 'mm_global_flag', true);?> " class="content-flag"/>
                 <?php endif; ?></a></h3>
-                  <div class="col-xs-12 no-gutter"><?php the_content();?>
-                 <?php if( get_field('hidden_content') ): ?>
-                    <p><a href="javascript:void(0);" class="expand-link">Read More</a></p></div>
-                    <div class="additional-content">
+                  <div class="mm-global-partners-copy col-xs-12 no-gutter"><?php the_content();?>
+                 <!--<?php if( get_field('hidden_content') ): ?>-->
+                    <p><a href="<?php if(get_post_meta($post->ID, 'mm_global_link', true)) {
+                echo get_post_meta($post->ID, 'mm_global_link', true); } ?>" alt="<?php the_title();?>" title="<?php the_title();?>">Read More</a></p></div>
+                    <!--<div class="additional-content">
                         <?php the_field('hidden_content'); ?>
                         <p><a href="javascript:void(0);" class="collapse-link">Hide This Content</a></p>
                     </div>
-                  <?php endif; ?>
+                  <?php endif; ?>-->
               </div>
             </div>  
             <?php  endwhile; endif; wp_reset_query();?>
