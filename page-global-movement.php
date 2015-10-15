@@ -113,9 +113,9 @@ get_header(); ?>
                   <?php the_title();?> <?php if ( get_post_meta($post->ID, 'mm_global_flag', true) ) : ?>
                 <img src="<?php bloginfo('wpurl'); ?><?php echo get_post_meta($post->ID, 'mm_global_flag', true);?> " class="content-flag"/>
                 <?php endif; ?></a></h3>
-                  <?php the_content();?>
+                  <div class="col-xs-12"><?php the_content();?>
                  <?php if( get_field('hidden_content') ): ?>
-                    <p><a href="javascript:void(0);" class="expand-link">Read More</a></p>
+                    <p><a href="javascript:void(0);" class="expand-link">Read More</a></p></div>
                     <div class="additional-content">
                         <?php the_field('hidden_content'); ?>
                         <p><a href="javascript:void(0);" class="collapse-link">Hide This Content</a></p>
